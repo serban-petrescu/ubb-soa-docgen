@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  store:
+    image: "mongo:3"
+
+  queue:
+    image: "rabbitmq:3"
+
+  database:
+    image: "postgres:11"
+    environment:
+      POSTGRES_USER: docgen
+      POSTGRES_PASSWORD: docgen-password
+
+  manager:
+    build: ./manager
+    links:
+     - database
+     - queue
+     - store
+    environment:
+      WAIT_HOSTS: store:27017, queue:5672, database:5432
+      SPRING_DATA_MONGODB_HOST: store
+      SPRING_RABBITMQ_HOST: queue
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/docgen
+      SPRING_DATASOURCE_USERNAME: docgen
+      SPRING_DATASOURCE_PASSWORD: docgen-password
+    ports:
+     - "8000:8000"
+
+  generator:
+    build: ./generator
+    links:
+     - store
+     - queue
+    environment:
+      WAIT_HOSTS: store:27017, queue:5672
+      DATABASE_URL: mongodb://store:27017/docgen
+      QUEUE_URL: amqp://queue:5672/

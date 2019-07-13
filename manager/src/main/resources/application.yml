@@ -1,0 +1,21 @@
+server.port: 8000
+
+spring.jpa.hibernate.naming:
+  implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
+  physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+logging.level:
+  org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+  org.hibernate:
+    SQL: DEBUG
+    stat: DEBUG
+    engine.internal: WARN
+    engine.jdbc.env.internal.LobCreatorBuilderImpl: WARN
+    type.descriptor.sql.BasicBinder: TRACE
+
+spring.jpa.properties.hibernate:
+  generate_statistics: true
+  hbm2ddl.import_files: mock.sql
+
+spring.jpa.hibernate.ddl-auto: create-drop
+spring.data.mongodb.database: docgen

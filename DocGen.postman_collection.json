@@ -1,0 +1,643 @@
+{
+	"info": {
+		"_postman_id": "fbbaeb6c-e691-40ad-b280-65931b9832aa",
+		"name": "DocGen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Read suggestions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/company-suggestions?name=Gen",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"company-suggestions"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Gen"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies/1",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read first page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read second page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies?page=1",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Corporation\",\n    \"identification\": {\n        \"number\": \"07-923-8931\",\n        \"registration\": \"TST\"\n    },\n    \"headquarters\": {\n        \"country\": \"Romania\",\n        \"region\": \"Sibiu\",\n        \"streetAddress\": \"17 Ciment Alley\",\n        \"postalCode\": \"535345\"\n    },\n    \"office\": {\n        \"country\": \"Romania\",\n        \"region\": \"Cluj\",\n        \"streetAddress\": \"8 Words Street\",\n        \"postalCode\": \"535345\"\n    },\n    \"bankAccount\": {\n        \"bank\": \"BT\",\n        \"iban\": \"BT05 5169 1467 4291 XX\"\n    },\n    \"vat\": true,\n    \"capital\": 150,\n    \"email\": \"contact@test.org\"\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 101,\n    \"name\": \"Test Corp.\",\n    \"identification\": {\n        \"number\": \"07-923-8931\",\n        \"registration\": \"TST\"\n    },\n    \"headquarters\": {\n        \"country\": \"Romania\",\n        \"region\": \"Sibiu\",\n        \"streetAddress\": \"17 Ciment Alley\",\n        \"postalCode\": \"535345\"\n    },\n    \"office\": {\n        \"country\": \"Romania\",\n        \"region\": \"Cluj\",\n        \"streetAddress\": \"8 Words Street\",\n        \"postalCode\": \"535345\"\n    },\n    \"bankAccount\": {\n        \"bank\": \"BT\",\n        \"iban\": \"BT05 5169 1467 4291 XX\"\n    },\n    \"vat\": true,\n    \"capital\": 150,\n    \"email\": \"contact@test.org\"\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"101"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "People",
+			"item": [
+				{
+					"name": "Read suggestions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/person-suggestions?name=Jo",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"person-suggestions"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/persons/1",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"persons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read first page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/persons",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read second page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/persons?page=1",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"persons"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create person",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Person\",\n    \"personalNumber\": \"921029-10\",\n    \"address\": {\n        \"country\": \"Romania\",\n        \"region\": \"Cluj\",\n        \"streetAddress\": \"57 Unirii Street\",\n        \"postalCode\": \"654645\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{root}}/persons",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"persons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update person",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 101,\n    \"name\": \"Test Persona\",\n    \"personalNumber\": \"921029-10\",\n    \"address\": {\n        \"country\": \"Romania\",\n        \"region\": \"Cluj\",\n        \"streetAddress\": \"57 Unirii Street\",\n        \"postalCode\": \"654645\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{root}}/persons/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"persons",
+								"101"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Read first page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read second page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices?page=1",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices",
+								"101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"series\": \"SB\",\n    \"number\": 101,\n    \"issueDate\": \"2018-07-01\",\n    \"dueDate\": \"2018-03-18\",\n    \"company\": {\n        \"id\": 5\n    },\n    \"customer\": {\n        \"id\": 95\n    },\n    \"delegate\": {\n        \"id\": 13\n    },\n    \"lines\": [\n        {\n            \"name\": \"customer loyalty\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 47.15\n        },\n        {\n            \"name\": \"strategy\",\n            \"quantity\": 18,\n            \"vatRate\": 0,\n            \"unitPrice\": 39.59\n        },\n        {\n            \"name\": \"secondary\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 33.92\n        },\n        {\n            \"name\": \"Public-key\",\n            \"quantity\": 11,\n            \"vatRate\": 0,\n            \"unitPrice\": 46.7\n        },\n        {\n            \"name\": \"holistic\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 29.6\n        },\n        {\n            \"name\": \"moderator\",\n            \"quantity\": 8,\n            \"vatRate\": 0,\n            \"unitPrice\": 26.21\n        },\n        {\n            \"name\": \"explicit\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 56.36\n        },\n        {\n            \"name\": \"model\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 72.15\n        },\n        {\n            \"name\": \"methodical\",\n            \"quantity\": 6,\n            \"vatRate\": 0,\n            \"unitPrice\": 36.92\n        },\n        {\n            \"name\": \"hybrid\",\n            \"quantity\": 10,\n            \"vatRate\": 0,\n            \"unitPrice\": 59.7\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update invoice - properties",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"series\": \"SB\",\n    \"number\": 102,\n    \"issueDate\": \"2018-07-01\",\n    \"dueDate\": \"2018-03-18\",\n    \"company\": {\n        \"id\": 5\n    },\n    \"customer\": {\n        \"id\": 95\n    },\n    \"delegate\": {\n        \"id\": 13\n    },\n    \"lines\": [\n        {\n            \"id\": 1001,\n            \"name\": \"customer loyalty\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 47.15\n        },\n        {\n            \"id\": 1002,\n            \"name\": \"strategy\",\n            \"quantity\": 18,\n            \"vatRate\": 0,\n            \"unitPrice\": 39.59\n        },\n        {\n            \"id\": 1003,\n            \"name\": \"secondary\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 33.92\n        },\n        {\n            \"id\": 1004,\n            \"name\": \"Public-key\",\n            \"quantity\": 11,\n            \"vatRate\": 0,\n            \"unitPrice\": 46.7\n        },\n        {\n            \"id\": 1005,\n            \"name\": \"holistic\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 29.6\n        },\n        {\n            \"id\": 1006,\n            \"name\": \"moderator\",\n            \"quantity\": 8,\n            \"vatRate\": 0,\n            \"unitPrice\": 26.21\n        },\n        {\n            \"id\": 1007,\n            \"name\": \"explicit\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 56.36\n        },\n        {\n            \"id\": 1008,\n            \"name\": \"model\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 72.15\n        },\n        {\n            \"id\": 1009,\n            \"name\": \"methodical\",\n            \"quantity\": 6,\n            \"vatRate\": 0,\n            \"unitPrice\": 36.92\n        },\n        {\n            \"id\": 1010,\n            \"name\": \"hybrid\",\n            \"quantity\": 10,\n            \"vatRate\": 0,\n            \"unitPrice\": 59.7\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices",
+								"101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update invoice - remove line",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"series\": \"SB\",\n    \"number\": 101,\n    \"issueDate\": \"2018-07-01\",\n    \"dueDate\": \"2018-03-18\",\n    \"company\": {\n        \"id\": 5\n    },\n    \"customer\": {\n        \"id\": 95\n    },\n    \"delegate\": {\n        \"id\": 13\n    },\n    \"lines\": [\n        {\n            \"id\": 1002,\n            \"name\": \"strategy\",\n            \"quantity\": 18,\n            \"vatRate\": 0,\n            \"unitPrice\": 39.59\n        },\n        {\n            \"id\": 1003,\n            \"name\": \"secondary\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 33.92\n        },\n        {\n            \"id\": 1004,\n            \"name\": \"Public-key\",\n            \"quantity\": 11,\n            \"vatRate\": 0,\n            \"unitPrice\": 46.7\n        },\n        {\n            \"id\": 1005,\n            \"name\": \"holistic\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 29.6\n        },\n        {\n            \"id\": 1006,\n            \"name\": \"moderator\",\n            \"quantity\": 8,\n            \"vatRate\": 0,\n            \"unitPrice\": 26.21\n        },\n        {\n            \"id\": 1007,\n            \"name\": \"explicit\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 56.36\n        },\n        {\n            \"id\": 1008,\n            \"name\": \"model\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 72.15\n        },\n        {\n            \"id\": 1009,\n            \"name\": \"methodical\",\n            \"quantity\": 6,\n            \"vatRate\": 0,\n            \"unitPrice\": 36.92\n        },\n        {\n            \"id\": 1010,\n            \"name\": \"hybrid\",\n            \"quantity\": 10,\n            \"vatRate\": 0,\n            \"unitPrice\": 59.7\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices",
+								"101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update invoice - add line",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"series\": \"SB\",\n    \"number\": 101,\n    \"issueDate\": \"2018-07-01\",\n    \"dueDate\": \"2018-03-18\",\n    \"company\": {\n        \"id\": 5\n    },\n    \"customer\": {\n        \"id\": 95\n    },\n    \"delegate\": {\n        \"id\": 13\n    },\n    \"lines\": [\n        {\n            \"id\": 1002,\n            \"name\": \"strategy\",\n            \"quantity\": 18,\n            \"vatRate\": 0,\n            \"unitPrice\": 39.59\n        },\n        {\n            \"id\": 1003,\n            \"name\": \"secondary\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 33.92\n        },\n        {\n            \"id\": 1004,\n            \"name\": \"Public-key\",\n            \"quantity\": 11,\n            \"vatRate\": 0,\n            \"unitPrice\": 46.7\n        },\n        {\n            \"id\": 1005,\n            \"name\": \"holistic\",\n            \"quantity\": 14,\n            \"vatRate\": 0,\n            \"unitPrice\": 29.6\n        },\n        {\n            \"id\": 1006,\n            \"name\": \"moderator\",\n            \"quantity\": 8,\n            \"vatRate\": 0,\n            \"unitPrice\": 26.21\n        },\n        {\n            \"id\": 1007,\n            \"name\": \"explicit\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 56.36\n        },\n        {\n            \"id\": 1008,\n            \"name\": \"model\",\n            \"quantity\": 19,\n            \"vatRate\": 0,\n            \"unitPrice\": 72.15\n        },\n        {\n            \"id\": 1009,\n            \"name\": \"methodical\",\n            \"quantity\": 6,\n            \"vatRate\": 0,\n            \"unitPrice\": 36.92\n        },\n        {\n            \"id\": 1010,\n            \"name\": \"hybrid\",\n            \"quantity\": 10,\n            \"vatRate\": 0,\n            \"unitPrice\": 59.7\n        },\n        {\n            \"name\": \"test\",\n            \"quantity\": 5,\n            \"vatRate\": 0,\n            \"unitPrice\": 25\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices/101",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices",
+								"101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trigger document generation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/companies/5/invoices/100/generate",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"companies",
+								"5",
+								"invoices",
+								"100",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "Read status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{root}}/jobs/c48d09fa-0e28-4191-adfd-760a6a7a4f4b",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"jobs",
+								"c48d09fa-0e28-4191-adfd-760a6a7a4f4b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{root}}/login",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
